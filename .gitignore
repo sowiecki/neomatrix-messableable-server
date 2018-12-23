@@ -1,3 +1,9 @@
+# Private data
+secrets.h
+
+# IDE
+.vscode
+
 # Prerequisites
 *.d
 

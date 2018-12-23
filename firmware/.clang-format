@@ -1,0 +1,12 @@
+UseTab: false
+IndentWidth: 2
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterEnum: true
+  AfterStruct: true
+  SplitEmptyFunction: true
+AlignAfterOpenBracket: Align
+Cpp11BracedListStyle: false
+AllowShortIfStatementsOnASingleLine: false
+IndentCaseLabels: false
+ColumnLimit: 0
