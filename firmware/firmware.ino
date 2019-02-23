@@ -60,7 +60,7 @@ void setup() {
   matrix->setBrightness(matrix_brightness);
   matrix->setTextColor(colors[0]);
 
-  maxDisplacement = strlen(text) * pixelPerChar + matrix->width();
+  maxDisplacement = strlen(text) * pixelPerChar + (matrix->width() * 3);
 
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
@@ -118,7 +118,8 @@ void displayText(String text) {
   matrix->print(text);
   
   // https://community.particle.io/t/neomatrix-not-displaying-full-text-solved/9588/2
-  if (--x < -(maxDisplacement * 3)) {
+//  int computedMaxDisplacement = -(maxDisplacement * 3)
+  if (--x < -(maxDisplacement * 2)) {
     x = matrix->width();
     if (++pass >= 3)
       pass = 0;
